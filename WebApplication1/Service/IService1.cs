@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.ServiceModel.Web;
 
 namespace WebApplication1.Service
 {
@@ -12,6 +13,7 @@ namespace WebApplication1.Service
     public interface IService1
     {
         [OperationContract]
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare, UriTemplate= "DoWork")]
         void DoWork();
     }
 }
