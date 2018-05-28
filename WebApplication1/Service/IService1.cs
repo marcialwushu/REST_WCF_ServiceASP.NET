@@ -14,6 +14,6 @@ namespace WebApplication1.Service
     {
         [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare, UriTemplate= "DoWork")]
-        void DoWork();
+        String DoWork();
     }
 }
