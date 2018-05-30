@@ -17,5 +17,10 @@ namespace WebApplication1.Service
         {
             return "Hello REST WCS Service! :)";
         }
+
+        public int DoSquare(int value)
+        {
+            return value * value;
+        }
     }
 }
