@@ -7,6 +7,8 @@
         <button onclick="doSquare(); return false;">DoSquare</button>
         <input  type="text" id="squareValue"/>
         <button onclick="doAddValues(); return false;">DoAddValues</button>
+        <input  type="text" id="addValue1" style="width: 100px;"/>
+        <input  type="text" id="addValue2" style="width: 100px;"/>
     </div>
 
     <script type="text/javascript">
@@ -41,8 +43,8 @@
 
         function doAddValues() {
             var addValue = {
-                "Value1": 2,
-                "Value2": 3
+                "Value1": $("#addValue1").val(),
+                "Value2": $("#addValue2").val()
             };
 
             $.ajax({
