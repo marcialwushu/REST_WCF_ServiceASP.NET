@@ -23,4 +23,21 @@ namespace WebApplication1.Service
             return value * value;
         }
     }
+
+    [DataContract]
+    public class AddValues
+    {
+        [DataMember]
+        public int Value1 { get; set; }
+        [DataMember]
+        public int Value2 { get; set; }
+
+        public AddValues()
+        {
+            Value1 = 0;
+            Value2 = 0;
+        }
+
+    }
+
 }
