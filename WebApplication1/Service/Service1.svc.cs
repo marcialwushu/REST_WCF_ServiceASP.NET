@@ -22,6 +22,11 @@ namespace WebApplication1.Service
         {
             return value * value;
         }
+
+        public int DoAddValues(AddValues addValues)
+        {
+            return addValues.Value1 + addValues.Value2;
+        }
     }
 
     [DataContract]

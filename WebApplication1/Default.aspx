@@ -6,6 +6,7 @@
         <button onclick="doWork(); return false;">DoWork</button>
         <button onclick="doSquare(); return false;">DoSquare</button>
         <input  type="text" id="squareValue"/>
+        <button onclick="doAddValues(); return false;">DoAddValues</button>
     </div>
 
     <script type="text/javascript">
@@ -30,6 +31,24 @@
                 url: "/Service/Service1.svc/DoSquare",
                 type: "POST",
                 data: JSON.stringify(value),
+                dataType: "json",
+                contentType: "application/json",
+                success: function (result) {
+                    console.info(result);
+                }
+            });
+        }
+
+        function doAddValues() {
+            var addValue = {
+                "Value1": 2,
+                "Value2": 3
+            };
+
+            $.ajax({
+                url: "/Service/Service1.svc/DoAddValues",
+                type: "POST",
+                data: JSON.stringify(addValue),
                 dataType: "json",
                 contentType: "application/json",
                 success: function (result) {
